@@ -8,10 +8,11 @@
     @media (max-width: 750px) {
       display: block;
     }
-    // to state bars
-    // display: none;
-    .icons {
-      display: flex;
+    .stateBarsIcons {
+      @media (max-width: 750px) {
+        display: flex;
+      }
+      display: none;
       flex-direction: row;
       justify-content: flex-end;
       gap: 10px;
@@ -30,6 +31,7 @@
     .parent_search {
       position: relative;
       .mainSerch {
+        z-index: 1;
         position: absolute;
         right: 0;
         display: flex;
@@ -60,42 +62,47 @@
         }
       }
     }
-
-    > ul {
-      position: relative;
-      transition: all 0.3s ease-in-out;
-      // display: none;
-      padding: 5px 15px;
-      background-color: white;
-      li {
-        padding: 7px 0;
-        font-weight: 500;
-        a {
-          color: $alt-color;
-          transition: $main-transition;
-          &:hover {
-            color: $main-color;
+    nav {
+      @media (max-width: 750px) {
+        display: block;
+      }
+      display: none;
+      > ul {
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        // display: none;
+        padding: 5px 15px;
+        background-color: white;
+        li {
+          padding: 7px 0;
+          font-weight: 500;
+          a {
+            color: $alt-color;
+            transition: $main-transition;
+            &:hover {
+              color: $main-color;
+            }
           }
         }
-      }
-      li.shop,
-      li.blog {
-        transition: all 0.3s ease-in-out;
-        position: relative;
-        background-color: white;
-        i {
-          font-size: 12px;
-          transform: rotate(-90deg);
+        li.shop,
+        li.blog {
+          transition: all 0.3s ease-in-out;
           position: relative;
-          color: $main-color;
-        }
-        ul {
-          margin-top: 5px;
-          box-shadow: 1px 5px 5px -3px #6e6e6e57;
-          display: none;
-          padding: 5px 0;
-          li {
-            padding: 5px 15px;
+          background-color: white;
+          i {
+            font-size: 12px;
+            transform: rotate(-90deg);
+            position: relative;
+            color: $main-color;
+          }
+          ul {
+            margin-top: 5px;
+            box-shadow: 1px 5px 5px -3px #6e6e6e57;
+            display: none;
+            padding: 5px 0;
+            li {
+              padding: 5px 15px;
+            }
           }
         }
       }

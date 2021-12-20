@@ -17,16 +17,14 @@ ul {
 a {
   text-decoration: none;
 }
+
 .left-fixed {
   @include fixed-button;
 }
-.left-fixed-active {
+.active {
   right: 290px;
 }
-.active {
-  position: relative;
-  display: block !important;
-}
+
 .visible {
   visibility: visible !important;
 }

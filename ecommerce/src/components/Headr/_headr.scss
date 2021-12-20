@@ -27,6 +27,9 @@
         width: 80%;
         padding-bottom: 10px;
       }
+      @media (max-width: 400px) {
+        width: 100%;
+      }
       display: flex;
       width: 50%;
       justify-content: space-evenly;
@@ -40,6 +43,10 @@
       @media (max-width: 992px) {
         width: 90%;
       }
+      @media (max-width: 400px) {
+        width: 107%;
+      }
+
       display: flex;
       width: 45%;
       justify-content: space-evenly;

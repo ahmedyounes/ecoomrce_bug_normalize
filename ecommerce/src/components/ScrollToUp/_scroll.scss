@@ -1,0 +1,27 @@
+.scrollTo {
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    button {
+      background-color: $main-color;
+    }
+  }
+  button {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: $alt-color;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 20px 20px;
+  }
+  svg {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+}
