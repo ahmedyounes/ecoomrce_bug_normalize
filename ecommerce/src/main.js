@@ -1,15 +1,15 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
-import MainHome from './MainHome/mainHome'
-import SecondPadge from './SecondPadge/second'
+import MainHome from './MainHome'
+import SecondPadge from './SecondPadge'
 
 const Main = () => {
   return (
-    <Switch>
-      <Route exact path='/' component={MainHome}></Route>
-      <Route exact path='/seond' component={SecondPadge}></Route>
-    </Switch>
+    <Routes>
+      <Route path='/seond' element={SecondPadge}></Route>
+      <Route exact path='/' element={MainHome}></Route>
+    </Routes>
   )
 }
 
